@@ -1,0 +1,98 @@
+myshell.py
+Python 3.4.6
+Written by Sean Hammond
+Student Number: 17374356
+
+myshell is a shell based in python which supports I/O output redirection,
+invocation of programs which can be excecuted in the background as a subprocess.
+
+In this file, () are used to show mandatory parameters, while [] are used to show
+optional parameters.
+
+A description of the available operation and commands is explained below.
+
+help:
+this command displays this readme file in blocks of 20 lines. press ENTER to
+display the next set of lines.
+
+Sample Usage:
+help
+
+
+cd [directory]:
+changes the current directory to the one specified in the arguments.
+
+Sample Usage:
+cd public_html
+
+clr:
+Clears the terminal and places the prompt at the top of the screen.
+
+Sample Usage:
+clr
+
+dir [directory]:
+Reports the contents of the c directory specified in the arguments.
+If no arguments are given, reports the current directory.
+
+Sample Usage:
+dir public_html
+
+
+environ:
+Outputs the evironment variables.
+
+Sample Usage:
+environ
+
+echo (arguments):
+Outputs the arguments given.
+
+Sample Usage:
+echo Hello World!
+
+pause:
+Pauses the shell and all processes until the ENTER key is pressed.
+
+Sample Usage:
+pause
+
+
+quit:
+Exits the shell and terminates all running subprocesses.
+
+Sample Usage:
+quit
+
+myshell will interpret any other commands provided as program invocation and will
+execute the given command and following arguments as such.
+
+Sample Usage:
+python3 hello.py
+
+myshell is capable of taking input from a batchfile text document given in the arguments
+when the program is launched.
+
+Sample Usage:
+myshell.py batchfile.txt
+
+
+myshell supports I/O output redirection. To utilise this, write ">>" and a 
+file name after a command to redirect the output of the command to the end 
+of the specified file.
+
+Sample Usage:
+echo Hello World >> hello.txt
+
+Write ">" and the file name after the given command to overwrite the file with
+the output of the shell.
+
+Sample Usage:
+echo Hello World > hello.txt
+
+myshell supports the excecution of commands and program invocations as subprocesses.
+To use this, write & at the end of the command to make the shell run the process in the
+background.
+
+Sample Usage:
+python3 test.py &
